@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    // Solution: Correctly use innerHTML and sanitize if external input is used
+    const newContent = "<p>This text replaces the div content.</p><p>This is another paragraph.</p>";
+    document.getElementById("myDiv").innerHTML = newContent; 
+  </script>
+</body>
+</html>
